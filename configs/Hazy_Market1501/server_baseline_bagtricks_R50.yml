@@ -1,0 +1,49 @@
+_BASE_: "../Base-bagtricks.yml"
+
+DATASETS:
+  NAMES: ("Hazy_Market1501",)
+  TESTS: ("DukeMTMC", "Hazy_DukeMTMC")
+
+TDATASETS:
+  NAMES: ("Hazy_DukeMTMC",)
+#DATASETS:
+#  NAMES: ("Hazy_DukeMTMC",)
+#  TESTS: ("Market1501", "Hazy_Market1501")
+#
+#TDATASETS:
+#  NAMES: ("Hazy_Market1501",)
+
+SOLVER:
+  D_BASE_LR: (0.0001)
+  D_OPT: ("Adam") # SGD
+
+# ISM
+#MODEL:
+#  WEIGHTS: "/home/pj/fast-reid-master/logs/hazy-market1501/bagtricks_R50/baseline/model_final.pth"
+#  LOSSES:
+#    NAME:  ['s_CrossEntropyLoss',  'Dis_loss', 'BachDistance_loss_t',]
+
+# Baseline modified
+MODEL:
+  LOSSES:
+    NAME:  ['s_CrossEntropyLoss',  't_CrossEntropyLoss',]
+
+  PARAM:
+    KD_PARAM: (1.)
+    KD_TEMP: (10.)
+    KD_red: ("mean")
+    BD_param: (1.)
+    METRIC: ("euclidean") # "cosine, euclidean"
+    Dis_mode: "mix"
+    Dis_iter: 0.99
+    BASEMODE: True
+    Dis_net: "cam_Classifier"
+
+OUTPUT_DIR: "/home/pj/fast-reid-master/logs/hazy-market1501/bagtricks_R50"
+#OUTPUT_DIR: "/home/lhf/pj/fast-reid-master/logs/hazy-dukemtmc/bagtricks_R50"
+
+#MODEL:
+#  LOSSES:
+#    NAME: ( Hazy_CrossEntropyLoss, "Tar_KD_loss", "Src_KDLoss")
+#    NAME: ("CrossEntropyLoss","Hazy_CrossEntropyLoss",
+#           "Cross_adv" , "KDLoss")

@@ -1,0 +1,30 @@
+_BASE_: "../Base-bagtricks.yml"
+
+DATASETS:
+  NAMES: ("Hazy_DukeMTMC",)
+  TESTS: ("Market1501", "Hazy_Market1501")
+
+TDATASETS:
+  NAMES: ("Hazy_Market1501",)
+
+SOLVER:
+  D_BASE_LR: (0.0001)
+  D_OPT: ("Adam") # SGD
+
+MODEL:
+  LOSSES:
+    NAME:  ['s_CrossEntropyLoss',  't_CrossEntropyLoss',]
+
+  PARAM:
+    KD_PARAM: (1.)
+    KD_TEMP: (10.)
+    KD_red: ("mean")
+    BD_param: (1.)
+    METRIC: ("euclidean") # "cosine, euclidean"
+    Dis_mode: "mix"
+    Dis_iter: 0.99
+    BASEMODE: True
+    Dis_net: "cam_Classifier"
+
+OUTPUT_DIR: "/home/pj/fast-reid-master/logs/hazy-dukemtmc/bagtricks_R50"
+
