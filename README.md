@@ -33,6 +33,8 @@ Thank you.
 ## 3.Run the training file:
         sh pre_train.sh (Supervised training on source domain)
         sh train.sh (Training ISM)
+## Hazy image generation:
+
 
 # Contact:
     Don't hesitate to contact me if you meet any problems when using this code.
@@ -43,4 +45,4 @@ Thank you.
     Email: pangjian@stu.kust.edu.cn
 
 # Acknowledgements
-Our code is based on https://github.com/michuanhaohao/reid-strong-baseline.
+Our code is based on https://github.com/JDAI-CV/fast-reid,https://github.com/nianticlabs/monodepth2 and https://github.com/phoenixtreesky7/hazyimage_generator.
