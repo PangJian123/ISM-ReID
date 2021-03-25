@@ -27,8 +27,8 @@ Thank you.
 ## 2.Datasets and the pre-trained 
 - Prepare datasets and the pre-trained model please refer to https://github.com/PangJian123/fast-reid
 - Download the synthetic hazy datasets  through the links below:
-*Hazy-DukeMTMC-reID*:[Baidu Pan](*) 
-*Hazy-Market1501*:[Baidu Pan](*) 
+*Hazy-DukeMTMC-reID*:[Baidu Pan](https://pan.baidu.com/s/12engFwDf---c9QSFdyF3eg)（password：7ec8）
+*Hazy-Market1501*:[Baidu Pan](https://pan.baidu.com/s/1QFYbfOYgKkLokxXpPHr4uA) （password：xs52）
 
 ## 3.Run the training file:
         sh pre_train.sh (Supervised training on source domain)
