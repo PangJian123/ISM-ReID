@@ -3,7 +3,7 @@
 
 This package contains the source code which is associated with the following paper:
 
-Huafeng Li, Jian Pang, Zhengtao Yu, and Dapeng Tao, “HAZY RE-ID: AN INTERFERENCE SUPPRESSION MODEL FOR DOMAIN ADAPTATION PERSON RE-IDENTIFICATION UNDER INCLEMENT WEATHER CONDITION.” accepted as oral on ICME 2021.
+Jian Pang, Dacheng Zhang, Huafeng Li, Weifeng Liu, Zhengtao Yu, “HAZY RE-ID: AN INTERFERENCE SUPPRESSION MODEL FOR DOMAIN ADAPTATION PERSON RE-IDENTIFICATION UNDER INCLEMENT WEATHER CONDITION.” accepted as oral on ICME 2021.
 
 Edited by Jian Pang
 
