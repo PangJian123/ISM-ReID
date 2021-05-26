@@ -27,7 +27,7 @@ class Hazy_Market1501(ImagePairDataset):
         - images: 12936 (train) + 3368 (query) + 15913 (gallery).
     """
     _junk_pids = [0, -1]
-    dataset_dir = ''
+    dataset_dir = 'Hazy_Market-1501-v15.09.15'
     dataset_url = 'http://188.138.127.15:81/Datasets/Market-1501-v15.09.15.zip'
     dataset_name = "market1501"
 
